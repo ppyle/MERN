@@ -6,7 +6,7 @@ class PropItUp extends Component{
         super(props);
         this.state = {
             personAge: this.props.personAge
-        }
+        };
     }
 
     render(){
@@ -15,7 +15,7 @@ class PropItUp extends Component{
                 <h2>{this.props.personName}</h2>
                 <p>age: {this.state.personAge}</p>
                 <p>Hair Color: {this.props.hairColor}</p>
-                <button onClick={() => this.setState({personAge: this.props.personAge+1})}>its your birthday {this.props.personName}!</button>
+                <button onClick={() => this.setState({personAge: this.state.personAge+1})}>its your birthday {this.props.personName}!</button>
             
             </div>
         )
