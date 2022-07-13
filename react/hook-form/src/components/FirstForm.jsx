@@ -32,7 +32,7 @@ let [confirmpassword, setconfirmpassword] = useState("");
 
             {
                 email.length < 5 ? <p>email must be longer than 5 characters</p> :
-                null
+                null]
             }
 
             <label htmlFor="password"> Password: </label>
