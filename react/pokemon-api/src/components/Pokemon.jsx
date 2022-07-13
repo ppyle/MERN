@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import axios from "axios";
 
 const Pokemon = ()=>{
 
@@ -7,12 +8,11 @@ const Pokemon = ()=>{
 
 
     const clickMe = () => {
-        fetch("https://pokeapi.co/api/v2/pokemon")
-        .then(response => response.json())
+        axios.get("https://pokeapi.co/api/v2/pokemon")
 
         .then(response => {
             console.log("response from api is: ", response)
-            setMons(response.results)
+            setMons(response.data.results)
         })
         .catch(err=>console.log("something went wrong:", err))
     }
