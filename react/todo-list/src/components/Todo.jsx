@@ -15,7 +15,7 @@ const Todo = () => {
 
     const deleteTodo = (e, index) =>{
         let filteredCopy = todoList.filter((todo, i)=>{
-            return i!=index
+            return i!= index
         })
         settodoList(filteredCopy);
     }
