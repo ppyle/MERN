@@ -3,6 +3,7 @@ import Form from './components/Form';
 import AllProducts from './components/AllProducts';
 import {Routes, Link, Route} from 'react-router-dom';
 import OneProduct from './components/OneProduct';
+import EditProduct from './components/EditProduct';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
         }></Route>
         <Route exact path="/products/:id" element={<OneProduct/>}></Route>
+        <Route exact path="/products/edit/:id" element={<EditProduct/>}></Route>
       </Routes>
     </div>
   );
